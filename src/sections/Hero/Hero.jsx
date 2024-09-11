@@ -10,7 +10,7 @@ import githubDark from '../../assets/github-dark.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
 import profilePic from '../../assets/websitepic.webp';
-import CV from '../../assets/Resume_June_2024.pdf';
+import CV from '../../assets/RESUME.pdf';
 import { useTheme } from '../../common/ThemeContext';
 
 function Hero() {
@@ -62,7 +62,7 @@ function Hero() {
           <a href="https://x.com/Thatone26823209" target="_blank" rel="noopener noreferrer">
             <img src={twitterIcon} alt="Twitter icon" />
           </a>
-          <a href="https://github.com/KennyH1886/Code-Portfolio" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/KennyH1886" target="_blank" rel="noopener noreferrer">
             <img src={githubIcon} alt="Github icon" />
           </a>
           <a href="https://www.linkedin.com/in/kenhow1" target="_blank" rel="noopener noreferrer">
