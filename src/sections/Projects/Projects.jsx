@@ -23,7 +23,7 @@ function Projects() {
           src={squadlobbyPic} 
           link="https://squad-lobby.aiaggies.net/"
           h3="Ai Capital One budget Hackathon application"
-          p="An AI application to help manage budgets and track expenses interactively with various scenarios from a Hackathon."
+          p={<span className="projectCardDescription">An AI application to help manage budgets and track expenses interactively with various scenarios from a Hackathon.</span>}
         />
       </div>
     </section>

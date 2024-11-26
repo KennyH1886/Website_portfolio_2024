@@ -10,6 +10,17 @@
       border-radius: 20px;
     }
   
+    .projectCardDescription {
+      display: block;
+      text-align: center; /* Centers the text under the image */
+      word-wrap: break-word; /* Ensures long words break to fit */
+      margin: 0 auto;
+      max-width: 90%; /* Adjust as needed for your design */
+      line-height: 1.5; /* Increases spacing between lines for readability */
+    }
+
+
+
     a {
       width: fit-content;
       text-decoration: none;
