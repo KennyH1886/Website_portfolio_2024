@@ -1,38 +1,96 @@
+/* ✅ Ensure the whole section is centered */
+.showcaseSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ✅ Centering the title */
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/* ✅ New wrapper to ensure showcase is centered */
+.showcaseWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ✅ Ensures the showcase stays centered */
 .showcaseContainer {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    height: 400px;
-    overflow: hidden;
-  }
-  
-  .slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .active {
-    opacity: 1;
-  }
-  
-  .image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .caption {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    color: white;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    font-size: 18px;
-    border-radius: 5px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 550px;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
+/* ✅ Centers the image and its caption */
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ✅ Fix Image Alignment */
+.image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* ✅ Ensures caption stays inside the image */
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 10px;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease-in-out;
+  width: 90%;
+  max-width: 250px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* ✅ Caption expands when hovered */
+.caption:hover {
+  background: rgba(0, 0, 0, 0.8);
+  white-space: normal;
+  text-overflow: clip;
+}

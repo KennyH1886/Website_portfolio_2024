@@ -1,0 +1,42 @@
+.bubbleContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensures bubbles don't block user interactions */
+    overflow: hidden;
+    z-index: -1; /* Ensures bubbles stay in the background */
+  }
+  
+  .bubble {
+    position: absolute;
+    bottom: -100px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: floatUp ease-in-out infinite, sideWays ease-in-out infinite alternate;
+  }
+  
+  /* Floating Up Animation */
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(-120vh);
+      opacity: 0;
+    }
+  }
+  
+  /* Sideways Floating Animation */
+  @keyframes sideWays {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(20px);
+    }
+  }
+  
