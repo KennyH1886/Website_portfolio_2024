@@ -23,21 +23,18 @@ function Hero() {
 
   // Typing animation state
   const [displayedText, setDisplayedText] = useState('');
-  const text =
-    "I have professional experience in Full Stack Development, Data Science, and AI research, committed to delivering innovative solutions.";
+  const text = "I  have professional experience in Full Stack Development, data science, and research in AI, committed to delivering innovative solutions.";
 
   useEffect(() => {
     let index = 0;
-    setDisplayedText(''); // Reset before starting animation
-
     const typingInterval = setInterval(() => {
       setDisplayedText((prev) => prev + text.charAt(index));
       index++;
       if (index === text.length) clearInterval(typingInterval);
-    }, 50); // Adjust speed as needed
+    }, 50); // Adjust speed here (milliseconds)
 
-    return () => clearInterval(typingInterval);
-  }, []); // Remove 'text' from dependencies to prevent re-triggering
+    return () => clearInterval(typingInterval); // Cleanup
+  }, [text]);
 
   return (
     <section id="hero" className={styles.container}>
@@ -72,7 +69,9 @@ function Hero() {
             <img src={linkedinIcon} alt="LinkedIn icon" />
           </a>
         </span>
-        <p className={styles.description}>{displayedText}</p>
+        <p className={styles.description}>
+          {displayedText}
+        </p>
         <a href={CV} download>
           <button className="hover">Resume</button>
         </a>
