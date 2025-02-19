@@ -25,17 +25,18 @@ function Hero() {
   const text = "I have professional experience in Full Stack Development, data science, and research in AI, committed to delivering innovative solutions.";
 
   useEffect(() => {
+    setDisplayedText(""); // Ensure text resets completely before typing
     let index = 0;
-    setDisplayedText(""); // Reset before starting
-
+  
     const typingInterval = setInterval(() => {
       setDisplayedText((prev) => prev + text.charAt(index));
       index++;
-      if (index === text.length) clearInterval(typingInterval);
-    }, 50);
-
+      if (index >= text.length) clearInterval(typingInterval);
+    }, 50); // Adjust typing speed as needed
+  
     return () => clearInterval(typingInterval);
-  }, []); // Removed 'text' from dependencies
+  }, []); // No dependencies to prevent unnecessary re-renders
+  
 
   return (
     <section id="hero" className={styles.container}>
