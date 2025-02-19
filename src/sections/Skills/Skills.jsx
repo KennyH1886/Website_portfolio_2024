@@ -14,6 +14,8 @@ function Skills() {
       <div className={styles.skillList}>
         <SkillList src={checkMarkIcon} skill="HTML" />
         <SkillList src={checkMarkIcon} skill="Python"/>
+        <SkillList src={checkMarkIcon} skill="Pycharm"/>
+        <SkillList src={checkMarkIcon} skill="Google Collab"/>
         <SkillList src={checkMarkIcon} skill="CSS" />
         <SkillList src={checkMarkIcon} skill="JavaScript" />
         <SkillList src={checkMarkIcon} skill="TypeScript" />
@@ -30,8 +32,10 @@ function Skills() {
       <div className={styles.skillList}>
         <SkillList src={checkMarkIcon} skill="React" />
         <SkillList src={checkMarkIcon} skill="Angular" />
+        <SkillList src={checkMarkIcon} skill="streamlit" />
         <SkillList src={checkMarkIcon} skill="VS Code" />
         <SkillList src={checkMarkIcon} skill="Jupyter" />
+        <SkillList src={checkMarkIcon} skill="flutter" />
         <SkillList src={checkMarkIcon} skill="Net Beans" />
         <SkillList src={checkMarkIcon} skill="Eclipse" />
         <SkillList src={checkMarkIcon} skill="Docker" />

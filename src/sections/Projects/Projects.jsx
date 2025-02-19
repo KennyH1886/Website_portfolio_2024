@@ -4,6 +4,7 @@ import hipsster from '../../assets/hipsster.png';
 import fitLift from '../../assets/fitlift.png';
 import ProjectCard from '../../common/ProjectCard';
 import squadlobbyPic from '../../assets/squadlobby_logo.jpg'; // Placeholder image
+import dynamicListAI from '../../assets/dynamiclistai.png'; // Placeholder image for Dynamic List AI
 
 function Projects() {
   return (
@@ -29,7 +30,21 @@ function Projects() {
             interactively with various scenarios from a Hackathon.
           </>}
         />
+      
+      <ProjectCard
+          src={dynamicListAI}
+          link="https://ai-dyanmic-list.streamlit.app/"
+          h3="Dynamic List AI"
+          p={
+            <>
+              A simple Streamlit app that allows users to create tickets 
+              <br />
+              with estimated time and descriptions based on AI predictions.
+            </>
+          }
+        />
       </div>
+
     </section>
   );
 }
