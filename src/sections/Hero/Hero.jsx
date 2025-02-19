@@ -22,21 +22,21 @@ function Hero() {
 
   // Typing animation state
   const [displayedText, setDisplayedText] = useState('');
-  const text = "I have professional experience in Full Stack Development, data science, and research in AI, committed to delivering innovative solutions.";
+  const text = 
+    "I have professional experience in Full Stack Development, Data Science, and AI research, committed to delivering innovative solutions.";
 
   useEffect(() => {
-    setDisplayedText(""); // Ensure text resets completely before typing
+    setDisplayedText(""); // Reset text before animation starts
     let index = 0;
-  
+
     const typingInterval = setInterval(() => {
-      setDisplayedText((prev) => prev + text.charAt(index));
+      setDisplayedText(text.substring(0, index + 1)); // Ensure correct substring is displayed
       index++;
-      if (index >= text.length) clearInterval(typingInterval);
-    }, 50); // Adjust typing speed as needed
-  
-    return () => clearInterval(typingInterval);
-  }, []); // No dependencies to prevent unnecessary re-renders
-  
+      if (index === text.length) clearInterval(typingInterval);
+    }, 50); // Adjust speed as needed
+
+    return () => clearInterval(typingInterval); // Cleanup function
+  }, []); // Ensure effect runs only once
 
   return (
     <section id="hero" className={styles.container}>
