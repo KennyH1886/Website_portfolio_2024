@@ -23,7 +23,7 @@ function Hero() {
   // Typing animation state
   const [displayedText, setDisplayedText] = useState('');
   const text = 
-    "Graduating Senior, I have professional experience in Full Stack Development, Data Science, and AI research, committed to delivering innovative solutions. " +
+    "I have professional experience in Full Stack Development, Data Science, and AI research, committed to delivering innovative solutions. " +
     "I have worked with national laboratories on cutting-edge projects and collaborated with diverse teams to solve real-world challenges. " +
     "Additionally, I have won multiple hackathons with different companies, demonstrating my ability to develop impactful and creative technological solutions under pressure.";
 
