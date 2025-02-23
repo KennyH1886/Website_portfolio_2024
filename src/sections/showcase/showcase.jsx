@@ -50,7 +50,7 @@ const showcaseItems = [
   },
   { 
     img: chevron1, 
-    caption: "Multiple first places with Hackathons with Chevron"
+    caption: "Multiple first places in Hackathons with Chevron"
   },
   { 
     img: sandia, 

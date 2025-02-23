@@ -1,0 +1,74 @@
+/* Container Styling */
+.container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* Article Card */
+.articleCard {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  max-width: 400px; /* Slightly smaller for compact design */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.articleCard:hover {
+  transform: scale(1.05);
+}
+
+/* Enlarged Image */
+.largeImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Article Content */
+.articleContent {
+  padding: 10px;
+}
+
+/* Title Styling */
+.articleTitle {
+  font-size: 16px; /* Slightly smaller */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Description Styling */
+.articleDescription {
+  font-size: 13px; /* Smaller text */
+  color: #ccc;
+  margin-top: 5px;
+}
+
+/* Read More Link */
+.readMore {
+  font-size: 13px;
+  color: #1e90ff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+}
+
+/* Flexbox for Grid */
+.articlesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Icon Styling */
+.icon {
+  width: 50px; /* Increased icon size slightly */
+  height: 50px;
+  margin-bottom: 10px;
+}

@@ -1,37 +1,58 @@
+/* Main container: Centers content properly */
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
   text-align: center;
-  height: 100dvh;
-  min-height: 500px;
+  height: 100vh; /* Ensures it fills screen */
+  padding: 40px 20px; /* Adds spacing to avoid overlap */
 }
-
 
 .hero {
-  max-width: 200px;
+  width: 150px;
+  border-radius: 50%;
+  transform: translateY(-150px); /* Moves the image UP */
+  transition: transform 0.3s ease;
 }
 
+
+/* Moves down the entire text block even further */
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 50px;
+  margin-top: 80px; /* Increase this value to move text lower */
+}
+
+/* Adds even more spacing specifically for the name */
+.info h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 20px; /* Lower only the name */
+}
+
+/* Adjusts the entire hero container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  padding-top: 70px; /* Pushes everything lower */
+}
+
+/* Fixes social icons alignment */
 span {
   display: flex;
   gap: 25px;
   justify-content: center;
 }
 
-span a {
-  margin: 0;
-}
-
-span img {
-  width: 30px;
-}
-
-a {
-  width: fit-content;
-  align-self: center;
-}
-
+/* Ensures buttons and links are properly spaced */
 button {
   background-color: var(--btn-color);
   color: var(--btn-text-color);
@@ -43,41 +64,63 @@ button {
   font-weight: bold;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+  margin-top: 20px; /* Adds spacing */
 }
 
-button:hover {
-  transform: scale(1.05);
+/* Fix resume preview positioning */
+.resumePreview {
+  margin-top: 30px; /* Reduces gap */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 800px;
+  height: 500px; /* Fixes cut-off issue */
+  display: flex;
+  justify-content: center;
 }
 
-button:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-}
-
-.colorModeContainer {
-  position: relative;
-}
-
-.colorMode {
-  position: absolute;
-  right: 0;
-  width: 25px;
-}
-
-.colorMode:hover {
-  cursor: pointer;
-}
-
+/* Ensuring text block has enough space */
 .description {
   max-width: 50ch;
 }
 
+/* Info Box */
 .info {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
+  padding-bottom: 40px; /* Pushes content lower */
+}
+/* Social Icons Styling */
+.socialLinks {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
+.socialLinks a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.socialLinks a:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Special Linktree Icon Styling */
+.linktreeIcon {
+  border-radius: 50%; /* Makes it a circular icon */
+  background: white;
+  padding: 5px; /* Creates a neat border */
+}
+/* Desktop View: Align Image and Text Side by Side */
 @media (min-width: 800px) {
   .container {
     flex-direction: row-reverse;
@@ -88,6 +131,11 @@ button:active {
   .hero {
     max-width: 350px;
     width: 350px;
+    top: 0; /* Fixes profile image misalignment */
+  }
+
+  .resumePreview {
+    height: 550px; /* Adjusts for bigger screens */
   }
 }
 
@@ -95,5 +143,9 @@ button:active {
   .hero {
     max-width: 400px;
     width: 400px;
+  }
+
+  .resumePreview {
+    height: 600px; /* Ensures proper visibility */
   }
 }
