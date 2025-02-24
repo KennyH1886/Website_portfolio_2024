@@ -1,14 +1,17 @@
+/* Main container */
 .container {
   text-align: center;
   margin: 40px 0;
 }
 
-/* FLEXBOX to make education cards horizontal */
+/* FLEXBOX for Education Cards */
 .educationWrapper {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap; /* Ensures responsiveness */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Individual education card styling */
@@ -16,51 +19,94 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #222;
+  background: var(--card-bg-color);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  max-width: 350px; /* Adjust to keep them evenly sized */
-  flex: 1; /* Helps with equal spacing */
+  max-width: 350px; /* Keeps uniform card sizes */
+  flex: 1; /* Equal spacing */
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Adjust icon sizes */
+/* 🖼️ Adjust icon sizes */
 .icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
-}
-/* Ensures proper styling and smooth animation */
-.educationCard {
-  background-color: var(--card-bg-color);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, filter 0.4s ease-in-out;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
 }
 
-/* 🔥 Hover effect: Rotates hue for color shift animation */
+/* 🌟 Interactive hover effect */
 .educationCard:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-  filter: hue-rotate(15deg) brightness(1.2); /* Shifts colors slightly */
+  transform: scale(1.05);
+  filter: brightness(1.15);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Ensure text is readable */
-.educationCard h3,
-.educationCard p {
+/* 📜 Ensures readable text */
+.educationCard h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
   color: var(--text-color);
+  margin-bottom: 5px;
 }
 
-/* Dell certification link */
+.educationCard p {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.4;
+}
+
+/* 🏆 Certification Link Styling */
 .certLink {
   text-decoration: none;
-  color: #007bff; /* Blue color */
+  color: #007bff;
   font-weight: bold;
   transition: color 0.3s ease-in-out;
 }
 
 .certLink:hover {
-  color: #0056b3; /* Darker blue on hover */
+  color: #0056b3;
+}
+
+/* 📱 Mobile Adjustments */
+@media (max-width: 768px) {
+  .educationWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .educationCard {
+    width: 90%; /* Makes it stretch on mobile */
+    max-width: 380px;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .educationCard h3 {
+    font-size: 1.2rem;
+  }
+
+  .educationCard p {
+    font-size: 0.9rem;
+  }
+}
+
+/* 🖥️ Large Screens */
+@media (min-width: 1200px) {
+  .educationWrapper {
+    gap: 30px;
+  }
+
+  .educationCard {
+    max-width: 400px;
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+  }
 }
