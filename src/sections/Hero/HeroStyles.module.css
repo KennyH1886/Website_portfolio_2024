@@ -1,14 +1,14 @@
-/* Main container */
+/* ========== Main Hero Container ========== */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 100vh; /* Prevents layout breaking */
+  min-height: 100vh;
   padding: 40px 20px;
-  background-color: var(--background-color, #f4f4f4); /* Ensures proper background */
-  color: var(--text-color, #333);
+  background-color: black; /* Ensures dark theme */
+  color: white;
 }
 
 /* Profile Picture */
@@ -18,7 +18,7 @@
   transition: transform 0.3s ease;
 }
 
-/* Moves down the entire text block */
+/* ========== Text & Info Section ========== */
 .info {
   display: flex;
   flex-direction: column;
@@ -28,14 +28,25 @@
   margin-top: 50px;
 }
 
-/* Name Styling */
 .info h1 {
   font-size: 2.5rem;
   font-weight: bold;
   margin-top: 15px;
 }
 
-/* Social Links */
+.info h2 {
+  font-size: 1.8rem;
+}
+
+/* Description Text */
+.description {
+  max-width: 90%;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* ========== Social Links ========== */
 .socialLinks {
   display: flex;
   flex-wrap: wrap; /* Ensures proper wrapping */
@@ -49,6 +60,7 @@
   width: 40px;
   height: 40px;
   transition: transform 0.2s ease, opacity 0.2s ease;
+  filter: invert(1); /* Makes icons visible on dark mode */
 }
 
 .socialLinks a:hover img {
@@ -56,10 +68,10 @@
   opacity: 0.8;
 }
 
-/* Resume Button */
+/* ========== Resume Button ========== */
 button {
-  background-color: var(--btn-color, #007bff);
-  color: white;
+  background-color: #007bff; /* Blue button */
+  color: #ffffff !important; /* Ensures text is always visible */
   border: none;
   border-radius: 20px;
   padding: 12px 24px;
@@ -72,41 +84,32 @@ button {
 
 button:hover {
   transform: scale(1.05);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
 
-/* Resume Preview */
+/* ========== Resume Preview ========== */
 .resumePreview {
   width: 90%;
   max-width: 800px;
-  height: 500px;
-  margin: 20px auto; /* Adds spacing */
-  padding-bottom: 50px; /* Prevents overlap */
+  height: 500px; /* Default for desktop/tablet */
+  margin: 20px auto;
   border-radius: 10px;
   overflow: hidden;
-  background: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background: #1a1a1a; /* Dark gray for contrast */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 2; /* Ensures no overlap */
+  z-index: 2;
 }
 
-/* Prevent Highlights Clipping */
+/* ========== Prevent Highlights Clipping ========== */
 #highlights {
   padding-top: 100px; /* Pushes it down */
 }
 
-/* Description Text */
-.description {
-  max-width: 90%;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-top: 10px;
-}
-
-/* 📱 Mobile Adjustments */
+/* ========== Mobile Adjustments ========== */
 @media (max-width: 768px) {
   .container {
     padding-top: 50px;
@@ -138,12 +141,13 @@ button:hover {
   }
 
   .resumePreview {
-    height: 320px;
-    padding-bottom: 30px;
+    width: 95%;
+    height: 350px; /* Reducing height for mobile */
+    margin-top: 20px;
   }
 
   #highlights {
-    padding-top: 120px;
+    padding-top: 120px; /* Pushes it down */
   }
 
   button {
@@ -152,14 +156,13 @@ button:hover {
   }
 }
 
-/* 🖥️ Desktop View */
+/* ========== Large Screens Adjustments ========== */
 @media (min-width: 1200px) {
   .resumePreview {
     height: 550px;
   }
 }
 
-/* 🖥️ Large Screens */
 @media (min-width: 1400px) {
   .hero {
     max-width: 400px;
