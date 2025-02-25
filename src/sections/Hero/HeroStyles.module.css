@@ -1,3 +1,15 @@
+html, body {
+  background-color: #121212 !important;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #ffffff;
+}
+
+* {
+  color: #ffffff !important;
+}
+
 /* ========== Main Hero Container ========== */
 .container {
   display: flex;
@@ -7,7 +19,7 @@
   text-align: center;
   min-height: 100vh;
   padding: 40px 20px;
-  background-color: black;
+  background-color: #121212 !important;
   color: white;
 }
 
@@ -26,16 +38,11 @@
   gap: 20px;
   padding-bottom: 50px;
   margin-top: 50px;
+  color: #ffffff;
 }
 
-.info h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
-.info h2 {
-  font-size: 1.8rem;
+.info h1, .info h2, .sectionTitle, .description, .caption, .education-card, .education-card p {
+  color: #ffffff !important;
 }
 
 /* Description Text */
@@ -60,7 +67,7 @@
   width: 40px;
   height: 40px;
   transition: transform 0.2s ease, opacity 0.2s ease;
-  filter: invert(1);
+  filter: invert(1) brightness(1.2);
 }
 
 .socialLinks a:hover img {
@@ -68,26 +75,41 @@
   opacity: 0.8;
 }
 
-/* ========== Resume Button ========== */
-button {
-  background-color: #007bff;
+/* ✅ Ensuring visibility in all sections */
+.education-card, .project-card, .highlight-card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
   color: #ffffff !important;
-  border: none;
-  border-radius: 20px;
-  padding: 12px 24px;
-  font-size: 18px;
-  font-weight: bold;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-  margin-top: 15px;
 }
 
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+/* ✅ Fix faded text inside sections */
+.education-card p, .project-card p, .highlight-card p {
+  color: #ffffff !important;
 }
 
-/* ========== Resume Preview ========== */
+/* ✅ Matching Showcase Section Background with Hero Container */
+.showcaseSection {
+  background-color: #121212 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.caption {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.caption:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* ✅ Reverting Resume Preview Styling */
 .resumePreview {
   width: 90%;
   max-width: 800px;
@@ -104,99 +126,21 @@ button:hover {
   z-index: 2;
 }
 
-/* ========== Prevent Highlights Clipping ========== */
-#highlights {
-  padding-top: 100px;
+/* ✅ Fixing Resume Button */
+button {
+  background-color: #007bff !important;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  margin-top: 15px;
 }
 
-/* ========== Mobile Adjustments ========== */
-@media (max-width: 768px) {
-  .container {
-    padding-top: 50px;
-    min-height: auto;
-  }
-
-  .hero {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 20px;
-  }
-
-  .info {
-    text-align: center;
-    margin-top: 30px;
-  }
-
-  .info h1 {
-    font-size: 2rem;
-  }
-
-  .info h2 {
-    font-size: 1.5rem;
-  }
-
-  .description {
-    font-size: 0.9rem;
-    max-width: 85%;
-  }
-
-  .resumePreview {
-    width: 95%;
-    height: 350px;
-    margin-top: 20px;
-  }
-
-  #highlights {
-    padding-top: 120px;
-  }
-
-  button {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-}
-
-/* ========== Large Screens Adjustments ========== */
-@media (min-width: 1200px) {
-  .resumePreview {
-    height: 550px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .hero {
-    max-width: 400px;
-    width: 400px;
-  }
-
-  .resumePreview {
-    height: 600px;
-  }
-}
-
-/* ✅ Matching Showcase Section Background with Hero Container */
-.showcaseSection {
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 40px;
-  color: white;
-}
-
-.sectionTitle,
-.description,
-.caption {
-  color: #ffffff;
-}
-
-.caption {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.caption:hover {
-  background: rgba(0, 0, 0, 0.9);
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
