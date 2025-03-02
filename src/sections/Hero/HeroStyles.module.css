@@ -63,11 +63,14 @@ html, body {
   margin-top: 10px;
 }
 
+/* ✅ Fixed Logo Styling to Match Local */
 .socialLinks a img {
   width: 40px;
   height: 40px;
   transition: transform 0.2s ease, opacity 0.2s ease;
-  filter: invert(1) brightness(1.2);
+  filter: invert(1) brightness(1.2) contrast(1.2);
+  display: inline-block;
+  object-fit: contain;
 }
 
 .socialLinks a:hover img {
