@@ -20,7 +20,7 @@ function Hero() {
   const twitterIcon = theme === 'light' ? twitterLight : twitterDark;
   const githubIcon = theme === 'light' ? githubLight : githubDark;
   const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
-  const linktreeIcon = linktreeDark; // Add a light version if needed
+  const linktreeIcon = linktreeDark; // No need for theme toggle unless you have a light version
 
   // Typing animation state
   const [displayedText, setDisplayedText] = useState('');
@@ -42,7 +42,6 @@ function Hero() {
 
   return (
     <section id="hero" className={styles.container}>
-      {/* Flexbox Wrapper for Centering */}
       <div className={styles.colorModeContainer}>
         <img
           src={profilePic}
@@ -55,17 +54,17 @@ function Hero() {
       <div className={styles.info}>
         <h1>Kenny<br />Howard</h1>
         <h2>Software Engineer</h2>
-        
-        {/* Social Links */}
+
+        {/* ✅ Fixed Social Links */}
         <span className={styles.socialLinks}>
           <a href="https://x.com/Thatone26823209" target="_blank" rel="noopener noreferrer">
-            <img src={twitterIcon} alt="Twitter icon" />
+            <img src={twitterIcon} alt="Twitter icon" className={styles.socialIcon} />
           </a>
           <a href="https://github.com/KennyH1886" target="_blank" rel="noopener noreferrer">
-            <img src={githubIcon} alt="GitHub icon" />
+            <img src={githubIcon} alt="GitHub icon" className={styles.socialIcon} />
           </a>
           <a href="https://www.linkedin.com/in/kenhow1" target="_blank" rel="noopener noreferrer">
-            <img src={linkedinIcon} alt="LinkedIn icon" />
+            <img src={linkedinIcon} alt="LinkedIn icon" className={styles.socialIcon} />
           </a>
           <a href="https://linktr.ee/kenhow1" target="_blank" rel="noopener noreferrer">
             <img src={linktreeIcon} alt="Linktree icon" className={styles.linktreeIcon} />
@@ -77,7 +76,7 @@ function Hero() {
 
         {/* Resume Button */}
         <a href={CV} download>
-          <button className="hover">Resume</button>
+          <button className={styles.button}>Resume</button>
         </a>
 
         {/* Resume PDF Preview */}

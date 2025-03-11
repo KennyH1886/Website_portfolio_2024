@@ -1,3 +1,4 @@
+/* General Styling */
 html, body {
   background-color: #121212 !important;
   margin: 0;
@@ -63,20 +64,35 @@ html, body {
   margin-top: 10px;
 }
 
-/* ✅ Fix for Black Logos - Ensures Proper White Logos */
+/* ✅ Fixed Social Icon Styling */
 .socialLinks a img {
   width: 40px;
   height: 40px;
   transition: transform 0.2s ease, opacity 0.2s ease;
-  filter: invert(100%) brightness(100%);
   display: inline-block;
   object-fit: contain;
+}
+
+/* ✅ Fix: Make dark icons visible in dark mode */
+.socialIcon {
+  filter: brightness(0) invert(1) !important; /* Converts dark logos to white */
+}
+
+/* ✅ Ensure opacity is correct */
+.socialLinks a img {
+  opacity: 1 !important;
+}
+
+/* ✅ Fix Linktree Icon */
+.linktreeIcon {
+  filter: none !important; /* Prevents unwanted background issues */
+  background-color: transparent !important; /* Ensures no white box issue */
 }
 
 /* ✅ Hover Effect */
 .socialLinks a:hover img {
   transform: scale(1.1);
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 /* ✅ Ensuring visibility in all sections */
@@ -113,7 +129,7 @@ html, body {
   background: rgba(0, 0, 0, 0.9);
 }
 
-/* ✅ Reverting Resume Preview Styling */
+/* ✅ Resume Preview Styling */
 .resumePreview {
   width: 90%;
   max-width: 800px;
@@ -130,8 +146,8 @@ html, body {
   z-index: 2;
 }
 
-/* ✅ Fixing Resume Button */
-button {
+/* ✅ Resume Button */
+.button {
   background-color: #007bff !important;
   color: #ffffff !important;
   border: none;
@@ -144,7 +160,7 @@ button {
   margin-top: 15px;
 }
 
-button:hover {
+.button:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
