@@ -10,7 +10,7 @@ import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
 import linktreeDark from '../../assets/linktree_dark.png'; // Linktree Icon (Dark Mode)
 import profilePic from '../../assets/websitepic.webp';
-import CV from '../../assets/Resume_2025_.pdf';
+import CV from '../../assets/Resume_2025__.pdf';
 import { useTheme } from '../../common/ThemeContext';
 
 function Hero() {
