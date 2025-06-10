@@ -12,6 +12,14 @@ import Shep2 from "../../assets/Shep_2.jpg";
 import googleTE from "../../assets/g_tech.jpg"; 
 import capital1 from "../../assets/capital_1.jpg";  
 import sandia from "../../assets/sandia.jpg";
+import jpm from "../../assets/jp_m.png";
+import jph from "../../assets/jp_h.png";
+import hearme from "../../assets/hearme.png";
+import bloomberg from "../../assets/bloomberg.png";
+import seniorp from "../../assets/sp.png";
+import thefirst from "../../assets/the_first.jpg";
+import yuan from "../../assets/Xiaohong_Yuan.jpg";
+import undergrad_r from "../../assets/undergrad_research.jpg";
 
 // ✅ Animation variants
 const fadeInVariants = {
@@ -29,6 +37,10 @@ const showcaseItems = [
     img: Research, 
     caption: "AI/ML Reaserch application NCAT"
   },
+    { 
+    img: undergrad_r, 
+    caption: "undergrad research symposium 2024"
+  },
   { 
     img: documentation, 
     caption: "Documentation"
@@ -43,6 +55,18 @@ const showcaseItems = [
   },
   { 
     img: Shep2, 
+  },
+   { 
+    img: bloomberg, 
+    caption: "Bloomberg Global Finalist Event"
+  },
+     { 
+    img: jpm, 
+    caption: "Jp Morgan Data for good Hackathon with National Basketball Players Association (NBPA)"
+  },
+       { 
+    img: jph, 
+    caption: "Jp Morgan Hackathon demo"
   },
   { 
     img: capital1, 
@@ -60,6 +84,22 @@ const showcaseItems = [
     Click for more info
   </>,
     link: "https://www.sandia.gov/labnews/2024/12/19/sandia-welcomes-over-50-interns-from-hbcus/" 
+  },
+     { 
+    img: hearme, 
+    caption: "Sonify team hear me audio application"
+  },
+     { 
+    img: seniorp, 
+    caption: "Sonify team"
+  },
+     { 
+    img: thefirst, 
+    caption: "Dr. Siobahn Day Grady the first women to recieve a CS phd at NCAT"
+  },
+       { 
+    img: yuan, 
+    caption: "Dr.Xiahong Yuan undergrad professor"
   },
 ];
 
