@@ -19,19 +19,22 @@ function Projects() {
           p="Weather app using Api"
         />
         
-        
+        {/*
         <ProjectCard
           src={squadlobbyPic} 
           link="https://squad-lobby.aiaggies.net/"
           h3="Ai Capital One budget Hackathon application"
-          p={    <>
-            An AI application to help manage budgets and track expenses 
-            <br />
-            interactively with various scenarios from a Hackathon.
-          </>}
+          p={
+            <>
+              An AI application to help manage budgets and track expenses 
+              <br />
+              interactively with various scenarios from a Hackathon.
+            </>
+          }
         />
+        */}
       
-      <ProjectCard
+        <ProjectCard
           src={dynamicListAI}
           link="https://ai-dyanmic-list.streamlit.app/"
           h3="Dynamic List AI"
