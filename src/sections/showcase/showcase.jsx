@@ -20,6 +20,9 @@ import seniorp from "../../assets/sp.png";
 import thefirst from "../../assets/the_first.jpg";
 import yuan from "../../assets/Xiaohong_Yuan.jpg";
 import undergrad_r from "../../assets/undergrad_research.jpg";
+import me_ai from "../../assets/me_ai.jpg";
+import summit_ai from "../../assets/ai_summit.jpg";
+
 
 // ✅ Animation variants
 const fadeInVariants = {
@@ -99,7 +102,14 @@ const showcaseItems = [
   },
        { 
     img: yuan, 
-    caption: "Dr.Xiahong Yuan undergrad professor"
+    caption: "Dr.Xiahong Yuan Undergrad Research Professor"
+  },
+         { 
+    img: me_ai, 
+    caption: "The IAIER at NCCU x OpenAI Academy Summit"
+  },
+           { 
+    img: summit_ai,
   },
 ];
 
