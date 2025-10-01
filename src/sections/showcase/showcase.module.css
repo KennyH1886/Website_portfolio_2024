@@ -1,3 +1,5 @@
+/* ===== Layout ===== */
+
 /* ✅ Ensure the whole section is centered */
 .showcaseSection {
   display: flex;
@@ -9,7 +11,7 @@
   margin-bottom: 40px;
 }
 
-/* ✅ Centering the title */
+/* ✅ Centering the title (if using module class on the H1) */
 .sectionTitle {
   font-size: 2.5rem;
   font-weight: bold;
@@ -20,19 +22,21 @@
   margin-bottom: 20px;
 }
 
-/* ✅ New wrapper to ensure showcase is centered */
+/* ✅ Wrapper keeps the carousel centered */
 .showcaseWrapper {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-/* ✅ Ensures the showcase stays centered */
+/* ✅ The container is the positioning context for arrows */
 .showcaseContainer {
+  position: relative;              /* <-- crucial for arrow absolute positioning */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -41,18 +45,33 @@
   padding-bottom: 30px;
 }
 
-/* ✅ Centers the image and its caption */
+/* Optional: if you have a wrapper around the slide */
+.contentWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Slide / Image ===== */
+
 .slide {
+  position: relative;              /* caption overlays on this */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   width: 100%;
   max-width: 600px;
-  height: auto;
   min-height: 400px;
+  height: auto;
   overflow: hidden;
-  position: relative;
+}
+
+.imageLink {
+  display: inline-block;
+  width: 100%;
 }
 
 /* ✅ Fix Image Alignment */
@@ -63,18 +82,22 @@
   max-height: 500px;
   object-fit: contain;
   border-radius: 10px;
+  display: block;
 }
 
-/* ✅ Ensures caption stays inside the image */
+/* ===== Caption ===== */
+
 .caption {
   position: absolute;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+
   font-size: 1rem;
   font-weight: 500;
   color: #ffffff;
   text-align: center;
+
   background: rgba(0, 0, 0, 0.6);
   padding: 6px 10px;
   border-radius: 12px;
@@ -82,15 +105,110 @@
   transition: all 0.3s ease-in-out;
   width: 90%;
   max-width: 250px;
+
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  z-index: 2;
+
+  z-index: 2; /* above the image */
 }
 
-/* ✅ Caption expands when hovered */
 .caption:hover {
   background: rgba(0, 0, 0, 0.8);
   white-space: normal;
   text-overflow: clip;
 }
+
+/* ===== Arrows ===== */
+
+.arrowLeft,
+.arrowRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  width: 44px;
+  height: 44px;
+
+  font-size: 22px;      /* visible if using ← / → */
+  line-height: 1;
+  color: #111;          /* icon/text color */
+
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
+
+  z-index: 10;          /* ensure above image/caption */
+}
+
+.arrowLeft:hover,
+.arrowRight:hover {
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transform: translateY(-50%) scale(1.04);
+}
+
+.arrowLeft:active,
+.arrowRight:active {
+  transform: translateY(-50%) scale(0.98);
+}
+
+.arrowLeft {
+  left: 10px;
+}
+
+.arrowRight {
+  right: 10px;
+}
+
+/* If using SVG icons (e.g., lucide-react), ensure they inherit color/size */
+.arrowLeft svg,
+.arrowRight svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* ===== Accessibility Focus ===== */
+.arrowLeft:focus-visible,
+.arrowRight:focus-visible {
+  outline: 2px solid #4f46e5; /* indigo */
+  outline-offset: 2px;
+}
+
+/* ===== Responsive tweaks ===== */
+
+@media (max-width: 768px) {
+  .showcaseContainer {
+    min-height: 420px;
+  }
+  .slide {
+    max-width: 90%;
+    min-height: 320px;
+  }
+  .arrowLeft,
+  .arrowRight {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .arrowLeft { left: 6px; }
+  .arrowRight { right: 6px; }
+}
+
+@media (max-width: 480px) {
+  .caption {
+    font-size: 0.95rem;
+    max-width: 90%;
+  }
+}
+/* ===== The End ===== */
