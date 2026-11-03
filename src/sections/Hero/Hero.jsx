@@ -10,7 +10,7 @@ import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
 import linktreeDark from '../../assets/linktree_dark.png'; // Linktree Icon (Dark Mode)
 import profilePic from '../../assets/websitepic.webp'; // Updated Profile Picture
-import CV from '../../assets/Kenneth_Howard_Resume_Fall_2025.pdf'; // Updated Resume PDF
+import CV from '../../assets/Kenneth_Howard_Resume.pdf'; // Updated Resume PDF
 import { useTheme } from '../../common/ThemeContext';
 
 function Hero() {
